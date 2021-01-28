@@ -1,0 +1,189 @@
+/*--------- Full Page -------------*/
+
+body {
+  background-color: rgb(245, 245, 219);
+  font-family: "Merriweather", serif;
+}
+
+/*--------- Header -------------*/
+
+header {
+  background: url("https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&dl=brooke-lark-HlNcigvUi4Q-unsplash.jpg");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10% / 30%;
+  box-shadow: 20px 20px 50px 10px rgb(128, 128, 128);
+  color: rgb(255, 255, 255);
+  height: 500px;
+  text-align: center;
+}
+
+h1 {
+  background: rgba(49, 49, 49, 0.6);
+  background-size: cover;
+  border: 3px rgb(255, 255, 255);
+  border-radius: 10% / 70%;
+  box-shadow: 20px 20px 50px 10px rgb(128, 128, 128);
+  color: rgb(255, 255, 255);
+  font-family: "Merriweather", serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 91%;
+}
+
+/*--------- Navigation Bar -------------*/
+.container {
+  display: flex;
+  text-align: center;
+}
+
+.container > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#home,
+#foodJournal {
+  background: rgba(3, 94, 0, 0.6);
+  border: 3px white;
+  border-radius: 10% / 50%;
+  display: inline;
+  flex: 1 1 100px;
+  justify-content: space-between;
+  padding: 10px 90px 10px 90px;
+}
+
+a {
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  display: inline;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  background-color: rgb(4, 114, 32, 0.5);
+}
+
+/*--------- Main Section -------------*/
+main {
+  color: rgb(33, 175, 104);
+  font-family: "Merriweather", serif;
+  padding: 20px;
+}
+
+/*--------- Food Journal -------------*/
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+input {
+  border-radius: 10% / 50%;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+}
+
+input:hover {
+  background-color: rgb(4, 114, 32, 0.5);
+}
+
+/*--------- Footer -------------*/
+
+footer {
+  align-items: end;
+  background: url("https://images.unsplash.com/photo-1478144592103-25e218a04891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10% / 30%;
+  box-shadow: 10px 10px 50px 10px rgb(128, 128, 128);
+  color: rgb(255, 255, 255);
+  display: grid;
+  flex-wrap: wrap;
+  font-family: "Merriweather", serif;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footerFont {
+  background: rgba(49, 49, 49, 0.6);
+  border: 7px rgb(255, 255, 255);
+  border-radius: 10% / 50%;
+  box-shadow: 20px 10px 50px 10px hsl(0, 0%, 50%);
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  max-width: 92%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*--------- iPad Responsiveness -------------*/
+
+@media all and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container > li {
+    flex: 1 1 50%;
+  }
+}
+
+/*--------- iPhone Responsiveness -------------*/
+
+@media all and (max-width: 400px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container > li {
+    flex: 1 1 100%;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 0px;
+  }
+}
+
+/*--------- Print Page -------------*/
+
+@media print {
+  header,
+  footer,
+  .container * {
+    display: none !important;
+  }
+
+  #printArea * {
+    display: block;
+    visibility: visible;
+  }
+
+  #printArea {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+  }
+}
